@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+pnpm install
+# if pnpm-lock.yaml is changed, add it to the commit
+git diff --cached --name-only | grep pnpm-lock.yaml && git add pnpm-lock.yaml
+pnpm test

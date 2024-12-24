@@ -1,0 +1,55 @@
+:root {
+    /** Dark theme primary colors */
+    --clr-primary-a0: #0d232a;
+    --clr-primary-a10: #25383e;
+    --clr-primary-a20: #3d4d54;
+    --clr-primary-a30: #56646a;
+    --clr-primary-a40: #707c81;
+    --clr-primary-a50: #8b9599;
+
+    /** Dark theme surface colors */
+    --clr-surface-a0: #121212;
+    --clr-surface-a10: #282828;
+    --clr-surface-a20: #3f3f3f;
+    --clr-surface-a30: #575757;
+    --clr-surface-a40: #717171;
+    --clr-surface-a50: #8b8b8b;
+
+    /** Dark theme tonal surface colors */
+    --clr-surface-tonal-a0: #121415;
+    --clr-surface-tonal-a10: #28292a;
+    --clr-surface-tonal-a20: #3f4041;
+    --clr-surface-tonal-a30: #575859;
+    --clr-surface-tonal-a40: #717272;
+    --clr-surface-tonal-a50: #8b8c8d;
+}
+
+@font-face {
+  font-family: 'Capture It';
+  src: url('/fonts/CaptureIt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Capture It", sans-serif;
+    color: var(--clr-primary-a50);
+    background-color: var(--clr-surface-a0);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+}
