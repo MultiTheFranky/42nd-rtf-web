@@ -25,11 +25,11 @@
 }
 
 @font-face {
-  font-family: 'Capture It';
-  src: url('/fonts/CaptureIt.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Capture It";
+    src: url("/fonts/CaptureIt.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 html,

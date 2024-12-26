@@ -1,43 +1,42 @@
 name: Pull Request
 on:
-  pull_request:
-    types: [opened, reopened, synchronize, edited]
+    pull_request:
+        types: [opened, reopened, synchronize, edited]
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - run: pnpm install
-      - run: pnpm run lint
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
-        with:
-          build: pnpm run build
-          start: pnpm start
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - run: pnpm install
-      - run: pnpm run typecheck
-
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 18
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - run: pnpm install
+            - run: pnpm run lint
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: Cypress run
+              uses: cypress-io/github-action@v5
+              with:
+                  build: pnpm run build
+                  start: pnpm start
+    typecheck:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 18
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - run: pnpm install
+            - run: pnpm run typecheck
