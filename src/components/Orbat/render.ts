@@ -3,7 +3,7 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import Font from '@styles/Capture it_Regular.json';
-import type { Group, Unit } from "@types/Orbat";
+import type { Group, Unit } from "../../types/Orbat";
 
 
 const mockUnits: Unit[] = [{
