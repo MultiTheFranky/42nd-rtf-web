@@ -4,6 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Orbat from "@components/Orbat";
+import { ErrorAlert } from "@components/Error";
 
 const title = "42nd Ranger Task Force";
 ---
@@ -11,5 +12,6 @@ const title = "42nd Ranger Task Force";
 <Layout title={title}>
     <Header title={title} />
     <Orbat client:only="react" />
+    <ErrorAlert client:only="react" />
     <Footer />
 </Layout>

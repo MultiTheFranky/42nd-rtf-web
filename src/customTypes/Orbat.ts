@@ -49,6 +49,7 @@ const TeamsOrder = [
     "SQUAD LEADER",
     "TEAM LEADER",
     "MÉDICO DE COMBATE",
+    "LMG",
     "RIFLEMAN"
 ];
 
@@ -89,5 +90,7 @@ export type AppwriteMember = Member & Models.Document;
 
 export type Member = {
     name: string;
+    nickname: string;
     role: string;
+    Destiny: string;
 };

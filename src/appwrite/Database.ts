@@ -10,7 +10,12 @@ export function listDocuments(
     databaseId: string,
     collectionId: string
 ) {
-    return getDatabase(client).listDocuments(databaseId, collectionId);
+    try {
+        return getDatabase(client).listDocuments(databaseId, collectionId);
+    } catch (error) {
+        console.error(error);
+        return { documents: [] };
+    }
 }
 
 const ORBAT_DATABASE_ID = "orbat";
@@ -18,21 +23,31 @@ const ORBAT_GROUPS_COLLECTION_ID = "groups";
 const ORBAT_MEMBERS_COLLECTION_ID = "members";
 
 export async function getOrbat(client: Client) {
-    return (
-        await listDocuments(
-            client,
-            ORBAT_DATABASE_ID,
-            ORBAT_GROUPS_COLLECTION_ID
-        )
-    ).documents as AppwriteGroup[];
+    try {
+        return (
+            await listDocuments(
+                client,
+                ORBAT_DATABASE_ID,
+                ORBAT_GROUPS_COLLECTION_ID
+            )
+        ).documents as AppwriteGroup[];
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
 }
 
 export async function getMembers(client: Client) {
-    return (
-        await listDocuments(
-            client,
-            ORBAT_DATABASE_ID,
-            ORBAT_MEMBERS_COLLECTION_ID
-        )
-    ).documents as AppwriteMember[];
+    try {
+        return (
+            await listDocuments(
+                client,
+                ORBAT_DATABASE_ID,
+                ORBAT_MEMBERS_COLLECTION_ID
+            )
+        ).documents as AppwriteMember[];
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
 }

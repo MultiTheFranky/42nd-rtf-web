@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export const useCenteredTree = (
-    defaultTranslate = { x: 0, y: 0 }
+    defaultTranslate = { x: 950, y: 200 }
 ): [
     { width: number; height: number },
     { x: number; y: number },

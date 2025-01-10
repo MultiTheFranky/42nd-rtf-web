@@ -25,6 +25,12 @@ importers:
             "@mui/material":
                 specifier: ^6.3.0
                 version: 6.3.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@18.3.1))(@types/react@19.0.2)(react@18.3.1))(@types/react@19.0.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+            "@nanostores/react":
+                specifier: ^0.8.4
+                version: 0.8.4(nanostores@0.11.3)(react@18.3.1)
+            "@react-spring/web":
+                specifier: ^9.7.5
+                version: 9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
             "@types/react":
                 specifier: ^19.0.2
                 version: 19.0.2
@@ -37,6 +43,9 @@ importers:
             astro:
                 specifier: ^5.1.1
                 version: 5.1.1(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
+            nanostores:
+                specifier: ^0.11.3
+                version: 0.11.3
             react:
                 specifier: ^18.3.1
                 version: 18.3.1
@@ -46,6 +55,9 @@ importers:
             react-dom:
                 specifier: ^18.3.1
                 version: 18.3.1(react@18.3.1)
+            react-flippy:
+                specifier: ^1.1.0
+                version: 1.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
             rimraf:
                 specifier: ^6.0.1
                 version: 6.0.1
@@ -1888,6 +1900,16 @@ packages:
             "@types/react":
                 optional: true
 
+    "@nanostores/react@0.8.4":
+        resolution:
+            {
+                integrity: sha512-EciHSzDXg7GmGODjegGG1VldPEinbAK+12/Uz5+MAdHmxf082Rl6eXqKFxAAu4pZAcr5dNTpv6wMfEe7XacjkQ==
+            }
+        engines: { node: ^18.0.0 || >=20.0.0 }
+        peerDependencies:
+            nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
+            react: ">=18.0.0"
+
     "@nodelib/fs.scandir@2.1.5":
         resolution:
             {
@@ -2067,6 +2089,51 @@ packages:
             {
                 integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
             }
+
+    "@react-spring/animated@9.7.5":
+        resolution:
+            {
+                integrity: sha512-Tqrwz7pIlsSDITzxoLS3n/v/YCUHQdOIKtOJf4yL6kYVSDTSmVK1LI1Q3M/uu2Sx4X3pIWF3xLUhlsA6SPNTNg==
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+    "@react-spring/core@9.7.5":
+        resolution:
+            {
+                integrity: sha512-rmEqcxRcu7dWh7MnCcMXLvrf6/SDlSokLaLTxiPlAYi11nN3B5oiCUAblO72o+9z/87j2uzxa2Inm8UbLjXA+w==
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+    "@react-spring/rafz@9.7.5":
+        resolution:
+            {
+                integrity: sha512-5ZenDQMC48wjUzPAm1EtwQ5Ot3bLIAwwqP2w2owG5KoNdNHpEJV263nGhCeKKmuA3vG2zLLOdu3or6kuDjA6Aw==
+            }
+
+    "@react-spring/shared@9.7.5":
+        resolution:
+            {
+                integrity: sha512-wdtoJrhUeeyD/PP/zo+np2s1Z820Ohr/BbuVYv+3dVLW7WctoiN7std8rISoYoHpUXtbkpesSKuPIw/6U1w1Pw==
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+    "@react-spring/types@9.7.5":
+        resolution:
+            {
+                integrity: sha512-HVj7LrZ4ReHWBimBvu2SKND3cDVUPWKLqRTmWe/fNY6o1owGOX0cAHbdPDTMelgBlVbrTKrre6lFkhqGZErK/g==
+            }
+
+    "@react-spring/web@9.7.5":
+        resolution:
+            {
+                integrity: sha512-lmvqGwpe+CSttsWNZVr+Dg62adtKhauGwLyGE/RRyZ8AAMLgb9x3NDMA5RMElXo+IMyTkPp7nxTB8ZQlmhb6JQ==
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.0 || ^18.0.0
+            react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
     "@rollup/pluginutils@5.1.4":
         resolution:
@@ -5558,6 +5625,13 @@ packages:
         engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
         hasBin: true
 
+    nanostores@0.11.3:
+        resolution:
+            {
+                integrity: sha512-TUes3xKIX33re4QzdxwZ6tdbodjmn3tWXCEc1uokiEmo14sI1EaGYNs2k3bU2pyyGNmBqFGAVl6jAGWd06AVIg==
+            }
+        engines: { node: ^18.0.0 || >=20.0.0 }
+
     natural-compare@1.4.0:
         resolution:
             {
@@ -6161,6 +6235,15 @@ packages:
             }
         peerDependencies:
             react: ^18.3.1
+
+    react-flippy@1.1.0:
+        resolution:
+            {
+                integrity: sha512-fMaHrGL2HeyYq4ohl65b4EZG5JAawL6NMSiSOhhI68l54nortHvJBqHi5DeR1sF44/4RN2jeNsBXSXuBnOj7Vg==
+            }
+        peerDependencies:
+            react: ^17.0.2
+            react-dom: ^17.0.2
 
     react-is@16.13.1:
         resolution:
@@ -8666,6 +8749,11 @@ snapshots:
         optionalDependencies:
             "@types/react": 19.0.2
 
+    "@nanostores/react@0.8.4(nanostores@0.11.3)(react@18.3.1)":
+        dependencies:
+            nanostores: 0.11.3
+            react: 18.3.1
+
     "@nodelib/fs.scandir@2.1.5":
         dependencies:
             "@nodelib/fs.stat": 2.0.5
@@ -8751,6 +8839,38 @@ snapshots:
     "@pkgr/core@0.1.1": {}
 
     "@popperjs/core@2.11.8": {}
+
+    "@react-spring/animated@9.7.5(react@18.3.1)":
+        dependencies:
+            "@react-spring/shared": 9.7.5(react@18.3.1)
+            "@react-spring/types": 9.7.5
+            react: 18.3.1
+
+    "@react-spring/core@9.7.5(react@18.3.1)":
+        dependencies:
+            "@react-spring/animated": 9.7.5(react@18.3.1)
+            "@react-spring/shared": 9.7.5(react@18.3.1)
+            "@react-spring/types": 9.7.5
+            react: 18.3.1
+
+    "@react-spring/rafz@9.7.5": {}
+
+    "@react-spring/shared@9.7.5(react@18.3.1)":
+        dependencies:
+            "@react-spring/rafz": 9.7.5
+            "@react-spring/types": 9.7.5
+            react: 18.3.1
+
+    "@react-spring/types@9.7.5": {}
+
+    "@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+        dependencies:
+            "@react-spring/animated": 9.7.5(react@18.3.1)
+            "@react-spring/core": 9.7.5(react@18.3.1)
+            "@react-spring/shared": 9.7.5(react@18.3.1)
+            "@react-spring/types": 9.7.5
+            react: 18.3.1
+            react-dom: 18.3.1(react@18.3.1)
 
     "@rollup/pluginutils@5.1.4(rollup@4.29.1)":
         dependencies:
@@ -11245,6 +11365,8 @@ snapshots:
 
     nanoid@3.3.8: {}
 
+    nanostores@0.11.3: {}
+
     natural-compare@1.4.0: {}
 
     neotraverse@0.6.18: {}
@@ -11588,6 +11710,12 @@ snapshots:
             loose-envify: 1.4.0
             react: 18.3.1
             scheduler: 0.23.2
+
+    react-flippy@1.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+        dependencies:
+            "@babel/runtime": 7.26.0
+            react: 18.3.1
+            react-dom: 18.3.1(react@18.3.1)
 
     react-is@16.13.1: {}
 

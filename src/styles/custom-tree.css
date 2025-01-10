@@ -1,13 +1,16 @@
 .node__root > g > text {
     fill: var(--clr-primary-a50);
+    color: var(--clr-primary-a50);
 }
 
 .node__branch > g > text {
     fill: var(--clr-primary-a50);
+    color: var(--clr-primary-a50);
 }
 
 .node__leaf > g > text {
     fill: var(--clr-primary-a50);
+    color: var(--clr-primary-a50);
 }
 
 .rd3t-link {

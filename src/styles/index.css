@@ -53,3 +53,11 @@ main {
 .footer {
     margin-top: auto;
 }
+
+.flippy-front {
+    box-shadow: none !important;
+}
+
+.flippy-back {
+    box-shadow: none !important;
+}
