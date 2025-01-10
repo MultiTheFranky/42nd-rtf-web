@@ -57,7 +57,13 @@ const Orbat = () => {
 
     const renderForeignObjectNode = ({ nodeDatum }: { nodeDatum: any }) => {
         return (
-            <g>
+            <g
+                onClick={() => {
+                    setGroupModal(
+                        orbat.find((group) => group.name === nodeDatum.name)
+                    );
+                }}
+            >
                 <pattern
                     id={`image-${nodeDatum.name}`}
                     x="0"
@@ -82,11 +88,6 @@ const Orbat = () => {
                     width={100 * 2}
                     x={100 * -1}
                     y={nodeDatum.__rd3t.depth === 1 ? 0 : 100 * -1}
-                    onClick={() => {
-                        setGroupModal(
-                            orbat.find((group) => group.name === nodeDatum.name)
-                        );
-                    }}
                     fill={`url(#image-${nodeDatum.name})`}
                     style={{ stroke: "transparent" }}
                 ></rect>
@@ -153,6 +154,7 @@ const Orbat = () => {
                             zoom={1.5}
                             scaleExtent={{ min: 1, max: 1000 }}
                             separation={{ siblings: 2, nonSiblings: 4 }}
+                            draggable={false}
                         />
                     </GridWithRef>
                 )}
