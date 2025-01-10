@@ -7,7 +7,10 @@ export const useCenteredTree = (
     { x: number; y: number },
     React.RefObject<HTMLDivElement | null>
 ] => {
-    const [translate, setTranslate] = useState(defaultTranslate);
+    const [translate, setTranslate] = useState({
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 5
+    });
     const [dimensions, setDimensions] = useState<{
         width: number;
         height: number;
