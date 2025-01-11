@@ -85,6 +85,7 @@ export const CardModal = ({
                         // and other props, which will go to div
                         style={{
                             height: "100%",
+                            width: "40%",
                             justifySelf: "center",
                             verticalAlign: "middle",
                             marginTop: "2%",
@@ -98,6 +99,7 @@ export const CardModal = ({
                                     alt={member.name}
                                     style={{
                                         height: "90%",
+                                        width: "90%",
                                         justifySelf: "center",
                                         verticalAlign: "middle",
                                         marginTop: "2%"
@@ -118,7 +120,7 @@ export const CardModal = ({
                         <BackSide
                             style={{
                                 marginLeft:
-                                    member.nickname === "Bit" ? "-25%" : "-40%",
+                                    member.nickname === "Bit" ? "-30%" : "-20%",
                                 boxShadow: "0px"
                             }}
                         >
@@ -128,12 +130,12 @@ export const CardModal = ({
                                 style={{
                                     height:
                                         member.nickname === "Bit"
-                                            ? "50%"
+                                            ? "40%"
                                             : "90%",
                                     justifySelf: "center",
                                     verticalAlign: "middle",
                                     marginTop:
-                                        member.nickname === "Bit" ? "8%" : "2%"
+                                        member.nickname === "Bit" ? "30%" : "1%"
                                 }}
                             />
                         </BackSide>
@@ -173,7 +175,7 @@ export const CardModal = ({
                             style={{
                                 color: "white",
                                 textShadow: "2px 2px 4px #000000",
-                                textAlign: "center",
+                                textAlign: "left",
                                 fontSize: "0.75em"
                             }}
                         >
