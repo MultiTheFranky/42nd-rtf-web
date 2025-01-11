@@ -54,7 +54,7 @@ const OrbatModal = ({
                     >
                         {group?.name}
                     </Typography>
-                    <Grid2 container spacing={2}>
+                    <Grid2 container spacing={2} padding={2}>
                         {group?.members.map((member) => (
                             <Grid2 size={4} key={member.name}>
                                 <Card key={member.name}>
